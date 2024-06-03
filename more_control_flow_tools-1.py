@@ -72,3 +72,32 @@ for n in range(2, 10):
             break
         else:
             print(n, 'is a prime number')
+
+
+# continue函数
+for num in range(2,10):
+    if num % 2 == 0:
+        print("Found an even number", num)
+        continue
+    print("Found an odd number", num)
+
+# Pass状态
+while True:
+    pass
+
+
+# match statement
+# 已经不支持了
+# def http_error(status):
+#     match status:
+#         case '404':
+#             return 'Not Found'
+#         case '500':
+#             return 'Internal Server Error'
+#         case '400':
+#             return 'Bad Request',
+#         case '418':
+#             return 'I am a teapot'
+#         case _:
+#             return 'Something is wrong with the internet'
+
