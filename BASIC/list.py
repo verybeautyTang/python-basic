@@ -79,7 +79,7 @@ print(items5 <= items7)    # True
 
 # 列表的遍历
 
-itemsx = ['Python', 'Java', 'Go', 'Kotlin']
+itemsx =  ['Python', 'Java', 'Java', 'Go', 'Kotlin', 'Python']
 for x in range(len(itemsx)):
     print(x)
 
@@ -101,3 +101,46 @@ itemsx.insert(2, 'beautyTang')
 # 删除指定的元素
 itemsx.remove('Java')
 print(itemsx)
+
+# 元素位置和次数
+# 查找元素的索引位置
+print(itemsx.index('Python'))       # 0
+print(itemsx.index('Python', 2))    # 5
+# 注意：虽然列表中有'Java'，但是从索引为3这个位置开始后面是没有'Java'的
+print(itemsx.index('Java', 3))      # ValueError: 'Java' is not in lis
+
+
+# 元素排序和反转
+# 排序
+itemsx.sort()
+print(itemsx)    # ['Go', 'Java', 'Kotlin', 'Python', 'Python']
+# 反转
+itemsx.reverse()
+print(itemsx)    # ['Python', 'Python', 'Kotlin', 'Java', 'Go']
+
+
+# 列表的生成式
+# 创建一个由1到9的数字构成的列表
+items1 = []
+for x in range(1, 10):
+    items1.append(x)
+print(items1)
+
+# 创建一个由'hello world'中除空格和元音字母外的字符构成的列表
+items2 = []
+for x in 'hello world':
+    if x not in ' aeiou':
+        items2.append(x)
+print(items2)
+
+# 创建一个由个两个字符串中字符的笛卡尔积构成的列表
+items3 = []
+for x in 'ABC':
+    for y in '12':
+        items3.append(x + y)
+print(items3)
+
+
+# 嵌套的列表
+scores = [[0] * 3] * 5
+print(scores)    # [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
